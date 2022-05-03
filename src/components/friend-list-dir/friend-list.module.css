@@ -1,0 +1,30 @@
+.item{
+display: flex;
+border: solid 1px;
+box-shadow: 10px 5px 5px grey;
+max-width: 300px;
+height: 100px;
+align-items:center;
+margin-bottom: 10px;
+
+}
+.status{
+    display:flex;
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+    border-radius: 50%;
+}
+#true{
+    background-color:green;
+}
+#false{
+    background-color:red;
+}
+.avatar{
+    margin-left: 15px;
+}
+.name{
+    font-size: 25px;
+    margin-left: 15px;
+}

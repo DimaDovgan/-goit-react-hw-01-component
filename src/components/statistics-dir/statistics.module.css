@@ -1,0 +1,17 @@
+.statistics{
+    width: 500px;
+    border: 1px solid black;
+    margin-top: 20px;
+}
+.statList{
+    display: flex;
+    padding: 0;
+    margin: 0;
+    
+
+}
+.item{
+    list-style: none;
+    width: 100%;
+    height: 60px;
+}
