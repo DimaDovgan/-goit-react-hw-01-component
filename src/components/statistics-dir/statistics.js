@@ -16,16 +16,21 @@ export const Statistics = ({ title, stats }) => {
     return <section className={styles.statistics}>
         {title && <h2 className="title">{title}</h2>}
         <ul className={styles.statList}>
-            {stats.map(file => <li className={styles.item} style={{ backgroundColor:getRandomColor() }} key={file.id}>
-      <span className="label">{file.label}</span>
-      <span className="percentage">{file.percentage}</span>
+            {stats.map(({id,label,percentage}) => <li className={styles.item} style={{ backgroundColor:getRandomColor() }} key={id}>
+      <span className="label">{label}</span>
+      <span className="percentage">{percentage}</span>
     </li>) 
             }
   </ul>
 </section>
 }
 Statistics.propTypes = {
-  id: PropTypes.string,
-  label: PropTypes.string,
-  percentage: PropTypes.number
+  title: PropTypes.string,
+  stats: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string,
+      label: PropTypes.string,
+      percentage: PropTypes.number,
+    })
+  ),
 };
